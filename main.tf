@@ -62,7 +62,7 @@ resource "aws_lambda_function" "delete_snapshots" {
   filename      = "lambda.zip" // Upload your code as a zip file
   timeout       = 300
   vpc_config {
-    subnet_ids         = [aws_subnet.private.id]
+    subnet_ids         = []
     security_group_ids = [] // Add security group if needed
   }
 }
