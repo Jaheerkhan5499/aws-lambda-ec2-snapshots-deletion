@@ -63,7 +63,7 @@ resource "aws_lambda_function" "delete_snapshots" {
   timeout       = 300
   vpc_config {
     subnet_ids         = [aws_subnet.private.id]
-    security_group_ids = ["sg-0a7cbd75835f900a9"] // Add security group if needed
+    security_group_ids = [] // Add security group if needed
   }
 }
 
