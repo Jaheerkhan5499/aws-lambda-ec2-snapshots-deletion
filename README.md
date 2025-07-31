@@ -32,7 +32,7 @@ Here used terraform since it is easy manage as infrastructure as a code (IaaC) b
 
 ## Architecture
 
-![alt text](image.png)
+![alt text](design.png)
 
 ### Terraform commands:-
 
@@ -71,7 +71,7 @@ terraform apply --auto-approve terraform.tfplan
 }
 ```
 
-![alt text](image-1.png)
+![alt text](Iam-role.png)
 
 2) Create a Lambda function and trigger
 
@@ -79,19 +79,19 @@ terraform apply --auto-approve terraform.tfplan
     * Select "CloudWatch Events - Schedule"
     * Choose "rate(1 day)"
     * Enable trigger
-![alt text](image.png)
+![alt text](eventbridge.png)
 * Configure function
     * Enter name
     * Select "Python 3.6" from the Runtime dropdown
     * Check that Handler is "lambda_function.lambda_handler"
     * Choose the previously created IAM role.
-![alt text](image.png)
+![alt text](lambda.png)
 3) Check the logs
 
 Check the logs in the CloudWatch Logs area and metrics for lambda invocations.
 
-![alt text](image.png)
+![alt text](metrics.png)
 
 ## Validation
 
-![alt text](image.png)
+![alt text](logs.png)
